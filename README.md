@@ -1,11 +1,7 @@
 # CircosVJ
 Custom Circos to visualize V-J cassette usage in T Cell Receptor Repertoire
-//
-Custom Circos to visualize V-J cassette usage in T Cell Receptor Repertoire
 
-Boris Grinshpun, 2015
-
-//
+Author: Boris Grinshpun, 2015
 
 ###### TO RUN DEMO ######
 ./runcircos.sh -t -i demo.tsv -o demo_result -v 3 -j 4 -n 2 -d PATH_TO_CIRCOS_INSTALL
