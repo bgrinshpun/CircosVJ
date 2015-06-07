@@ -1,11 +1,11 @@
 # CircosVJ
 Custom Circos to visualize V-J cassette usage in T Cell Receptor Repertoire.
 
+Author: Boris Grinshpun, 2015
+
+
 The Circos software package can be downloaded from http://circos.ca/
 Krzywinski, M. et al. Circos: an Information Aesthetic for Comparative Genomics. Genome Res (2009) 19:1639-1645
-
-
-Author: Boris Grinshpun, 2015
 
 ###### TO RUN DEMO ######
 ./runcircos.sh -t -i demo.tsv -o demo_result -v 3 -j 4 -n 2 -d PATH_TO_CIRCOS_INSTALL
