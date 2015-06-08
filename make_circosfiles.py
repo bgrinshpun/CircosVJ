@@ -39,6 +39,8 @@ colordict={}
 
 for line in Vsum:
 	label=line[0]; end=line[1]
+	if end==0:
+		end=1;
 	color=label.lower()
 	band="v"+str(Vd[label])
 	colordict[band]=color
@@ -95,6 +97,8 @@ for i in range(Vlen):
 	start=0
         id_v='v'+str(Vd[Vs[i]])
         line=data[:,Vd[Vs[i]]]
+	if sum(line)==0:
+		continue;
 	Js=zip(Jcas,line)
 	Js=sorted(Js,key=lambda x: x[1], reverse=True)
 	Js=[p for p in Js if p[1]>0]
