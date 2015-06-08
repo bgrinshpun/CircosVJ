@@ -29,7 +29,7 @@ allJ=sorted(allJ,key=lambda x: natural_key(x))
 r = 125;
 g = 0;
 b= 0;
-totdist=(255-125)*2+255
+totdist=(255-125)*2+(2*255)
 stepsize=totdist/len(allV)
 
 colors=[(r,g,b)]
@@ -56,7 +56,7 @@ while(r > 0):
 	r -= stepsize;
 	if(r<0):
 		r=0;
-		g=g-r-1;
+		g=g-tmp-1;
 	colors.append((r, g, b)); 
 
 while(g>125):
