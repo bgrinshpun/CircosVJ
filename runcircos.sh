@@ -27,6 +27,8 @@ function usage() {
     echo >&2
     echo >&2 "\t-n Column number of VJ usage counts"
     echo >&2
+    echo >&2 "OPTIONAL INPUTS:"
+    echo >&2
     echo >&2 "\t-a Output level:
 	 	1: Keep only the Circos plot
 		2: Keep karyotype and link files
@@ -135,6 +137,7 @@ linkfile=$outpath.links.txt
 # Generate necessary input files to Circos software
 python make_table.py $file $[$vpos-1] $[$jpos-1] $[$npos-1] $colnames $tablefile
 python make_circosfiles.py $tablefile $karyotypefile $linkfile
+
 
 # Produce circos input file from templates
 sed "s:%FILE%:$karyotypefile:" plotmain_template.conf | sed "s:%colorfile%:$colorfile:" > $output/plotmain.conf
