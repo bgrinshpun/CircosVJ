@@ -44,13 +44,17 @@ for line in Vsum:
 	color=label.lower()
 	band="v"+str(Vd[label])
 	colordict[band]=color
-	fout.write(prefix+"\t"+band+"\t"+label[3:]+"\t0\t"+str(end)+"\t"+label+"\n")
+	fout.write(prefix+"\t"+band+"\t"+label[4:]+"\t0\t"+str(end)+"\t"+label+"\n")
+	#fout.write(prefix+"\t"+band+"\t"+label[3:]+"\t0\t"+str(end)+"\t"+label+"\n")
 
 for line in Jsum:
         label=line[0]; end=line[1]
+	if end==0:
+                end=1;
 	color=label.lower()
         band="j"+str(Jd[label])
-        fout.write(prefix+"\t"+band+"\t"+label[3:]+"\t0\t"+str(end)+"\t"+label+"\n")
+	fout.write(prefix+"\t"+band+"\t"+label[4:]+"\t0\t"+str(end)+"\t"+label+"\n")
+        #fout.write(prefix+"\t"+band+"\t"+label[3:]+"\t0\t"+str(end)+"\t"+label+"\n")
 
 # make bands
 
