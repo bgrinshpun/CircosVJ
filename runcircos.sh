@@ -109,11 +109,18 @@ fi
 
 [ -z $output ] && output="output";
 
-outpath=$output/$output
+outpath=$output/`basename $output`
 mkdir -p $output
 
 colorfile="colors_fonts_patterns"
 cp -r etc $output
+
+if [ -z $makecolor ]; then
+	echo
+	echo "Using predefined colors"
+	echo
+fi
+
 if [ ! -z $makecolor ]; then
     if [ $makecolor == "A" ]; then
 	python make_colors.py $file $[$vpos-1] $[$jpos-1] > $output/etc/rgb.userdefined.conf
@@ -124,7 +131,7 @@ if [ ! -z $makecolor ]; then
     else
 	echo "$makecolor is an INVALID OPTION"
 	echo
-	echo "Proceeding with default color definitions"
+	echo "Proceeding with predefined color definitions"
 	echo
     fi
 fi
