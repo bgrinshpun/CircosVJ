@@ -32,6 +32,7 @@ make_colors.py <- Used to generate custom color maps if needed. Switches to colo
 colors_fonts_patterns_new.conf reads from colors_new.conf which read from rgb.userdefined.txt
 
 
+![Screenshot](https://github.com/bgrinshpun/CircosVJ/blob/master/example.png)
 
 
 
