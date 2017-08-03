@@ -41,7 +41,14 @@ data=zip(*data)
 
 ## Select cassettes
 V=data[Vcol]
+V=[i.translate(None, 'TCRB') for i in V]
+V=[i.translate(None, 'TCRA') for i in V]
+
 J=data[Jcol]
+J=[i.translate(None, 'TCRB') for i in J]
+J=[i.translate(None, 'TCRA') for i in J]
+
+
 cts=map(int,data[ctscol])
 uV=list(set(V)) # unique V
 uJ=list(set(J)) # unique V

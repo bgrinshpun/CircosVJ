@@ -15,8 +15,12 @@ data=[i.strip().split("\t") for i in data]
 data=zip(*data)
 
 allV=list(set(data[Vcol]))
+allV=[i.translate(None, 'TCRA') for i in allV]
+allV=[i.translate(None, 'TCRB') for i in allV]
 allV=[c.lower() for c in allV]
 allJ=list(set(data[Jcol]))
+allJJ=[i.translate(None, 'TCRA') for i in allJ]
+allJ=[i.translate(None, 'TCRB') for i in allJ]
 allJ=[c.lower() for c in allJ]
 
 def natural_key(string_):

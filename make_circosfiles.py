@@ -8,6 +8,7 @@ import re
 # get cassettes and counts matrix
 data=open(sys.argv[1],'r')
 Vcas=data.readline()[1:].strip().split("\t")
+
 data=data.readlines()
 data=[i.strip().split("\t") for i in data]
 data=zip(*data)
@@ -44,7 +45,7 @@ for line in Vsum:
 	color=label.lower()
 	band="v"+str(Vd[label])
 	colordict[band]=color
-	fout.write(prefix+"\t"+band+"\t"+label[4:]+"\t0\t"+str(end)+"\t"+label+"\n")
+	fout.write(prefix+"\t"+band+"\t"+label+"\t0\t"+str(end)+"\t"+label+"\n")
 	#fout.write(prefix+"\t"+band+"\t"+label[3:]+"\t0\t"+str(end)+"\t"+label+"\n")
 
 for line in Jsum:
@@ -53,7 +54,7 @@ for line in Jsum:
                 end=1;
 	color=label.lower()
         band="j"+str(Jd[label])
-	fout.write(prefix+"\t"+band+"\t"+label[4:]+"\t0\t"+str(end)+"\t"+label+"\n")
+	fout.write(prefix+"\t"+band+"\t"+label+"\t0\t"+str(end)+"\t"+label+"\n")
         #fout.write(prefix+"\t"+band+"\t"+label[3:]+"\t0\t"+str(end)+"\t"+label+"\n")
 
 # make bands
